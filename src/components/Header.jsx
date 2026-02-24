@@ -1,21 +1,21 @@
-import React from 'react'
+import React from "react";
 
 const Header = () => {
   return (
     <>
-        <nav className='flex justify-evenly items-center p-4 '>
-        <h5 className='text-2xl font-bold text-white px-5'>My Portfolio</h5>
-        <ul className='flex gap-4 bg-transparent border rounded-xl p-2 items-center '>
-        <li className='text-white hover:bg-white hover:text-black cursor-pointer'>Home</li>
-        <li className='text-white hover:text-purple-400 cursor-pointer'>About</li>
-        <li className='text-white hover:text-purple-400 cursor-pointer'>Skills</li>
-        <li className='text-white hover:text-purple-400 cursor-pointer'>Projects</li>
-        <li className='text-white hover:text-purple-400 cursor-pointer'>Contact</li>
-      </ul>
-        </nav>
-      
-    </>
-  )
-}
+      <nav className="flex justify-between items-center p-4 m-2 bg-transparent ">
+        <img src="/RJ.png" alt="Logo" className="w-15 h-15 rounded-full object-cover" />
+        <ul className="flex gap-4 border rounded-xl items-center text-xl ">
+          <li className="py-2 px-4">Home</li>
+          <li className="py-2 px-4">About</li>
+          <li className="py-2 px-4">Skills</li>
+          <li className="py-2 px-4">Projects</li>
+          <li className="py-2 px-4">Contact</li>
+        </ul>
 
-export default Header
+      </nav>
+    </>
+  );
+};
+
+export default Header;
