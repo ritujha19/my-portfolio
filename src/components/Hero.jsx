@@ -1,4 +1,5 @@
 import React from 'react'
+import Contact from './cards/ContactCards'
 
 const Hero = () => {
   return (
@@ -10,6 +11,7 @@ const Hero = () => {
         <p className='pt-15 text-5xl font-mono text-gray-600'>building web applications and <br/>
            <strong className='text-white text-3xl italic'>expanding into full stack development.</strong></p>
       </div>
+      < Contact/>
     </>
   )
 }
