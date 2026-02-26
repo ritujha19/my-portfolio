@@ -1,6 +1,7 @@
 import React from "react";
 
 const Header = () => {
+  
   return (
     <>
       <nav className="flex justify-between items-center p-4 m-2 bg-transparent ">
@@ -12,7 +13,7 @@ const Header = () => {
           <li className="py-2 px-4">Projects</li>
           <li className="py-2 px-4">Contact</li>
         </ul>
-
+        
       </nav>
     </>
   );

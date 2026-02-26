@@ -4,7 +4,7 @@ import Contact from './cards/ContactCards'
 const Hero = () => {
   return (
     <>
-      <div className='w-full h-full text-center p-4' id='intro'>
+      <div className='w-full h-full text-center p-4 mb-25' id='intro'>
         <p className='pt-15 pb-4 text-xl'>Hi, I'm</p>
         <div className='w-full text-9xl '>RITU JHA</div>
         <p className='pt-10 text-3xl text-gray-400'>Exploring Full-Stack Development</p>
