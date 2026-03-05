@@ -11,8 +11,6 @@ html{
 
 body {
  font-family: 'times new roman', sans-serif;
-  background-color: #0d1117;
-  color: #e6edf3;
 }
 
 li:hover{
@@ -20,7 +18,6 @@ li:hover{
   background-color: #e6edf3;
   border-radius: 8px;
   transition: background-color 0.25s, color 0.25s;
-  
 }
 
 
