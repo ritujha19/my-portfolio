@@ -5,7 +5,7 @@ const contact = () => {
     <>
       <div className="card border rounded-xl p-6 m-10 backdrop-blur-3xl w-100 h-full flex flex-col gap-10">
         <div>
-          <p className="text-xs border p-2 rounded-2xl w-fit mb-4 font-sans text-gray-300 ">
+          <p className="text-xs border p-2 rounded-2xl w-fit mb-4 font-sans text-gray-300">
             available for job opportunities
           </p>
         </div>
