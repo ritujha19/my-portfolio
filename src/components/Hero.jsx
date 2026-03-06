@@ -1,6 +1,7 @@
 import React from 'react'
 import Contact from './cards/ContactCards'
 
+
 const Hero = () => {
   return (
     <>

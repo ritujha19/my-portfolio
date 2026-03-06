@@ -3,11 +3,14 @@ import React from "react";
 const contact = ({ darkMode = true }) => {
   return (
     <>
-      <div className={`card border rounded-xl p-6 m-10  w-100 h-full flex flex-col gap-10 ${darkMode ? 'border-gray-700  bg-dark bg-opacity-50' : 'border-gray-300 bg-gray-400 bg-opacity-50'}`}>
-        <div>
-          <p className={`text-xs border p-2 rounded-2xl w-fit mb-4 font-sans ${darkMode ? 'border-gray-600 text-gray-500 bg-transparent' : 'border-gray-400 text-gray-300 '}`}>
-            available for job opportunities
-          </p>
+      <div
+        className={`card border rounded-xl p-6 m-10  w-100 h-full flex flex-col gap-10 ${darkMode ? "border-gray-700  bg-dark bg-opacity-50" : "border-gray-300 bg-gray-400 bg-opacity-50"}`}
+      >
+        <div
+          className={`flex items-center px-2 gap-1 border rounded-2xl w-fit mb-4 font-sans ${darkMode ? "border-gray-600 text-gray-500 bg-transparent" : "border-gray-400 text-gray-300 "}`}
+        >
+          <strong className="text-green-700 text-2xl pb-1">&bull;</strong>
+          <p className="text-xs ">available for job opportunities</p>
         </div>
         <div className="flex flex-col gap-10 items-center text-center">
           <h2 className="card-title text-4xl font-bold mb-4">
@@ -18,7 +21,7 @@ const contact = ({ darkMode = true }) => {
           </h2>
           <a
             href="mailto:ritu05491@gmail.com"
-            className={`card-link btn px-6 py-3 w-fit rounded-full transition duration-300 flex items-center gap-2 text-center font-sans ${darkMode ? 'bg-gray-700 text-white hover:bg-white hover:text-black hover:border-black border-2' : 'bg-gray-800 text-white hover:bg-black hover:text-white'}`}
+            className={`card-link btn px-6 py-3 w-fit rounded-full transition duration-300 flex items-center gap-2 text-center font-sans ${darkMode ? "bg-gray-700 text-white hover:bg-white hover:text-black hover:border-black border-2" : "bg-gray-800 text-white hover:bg-black hover:text-white"}`}
           >
             {" "}
             Mail Me
@@ -26,7 +29,7 @@ const contact = ({ darkMode = true }) => {
               src="https://cdn.lordicon.com/dpggoewm.json"
               trigger="hover"
               state="in-assembly"
-              style={{ width: "40px", height: "40px" }}
+              style={{ width: "30px", height: "30px" }}
             ></lord-icon>
           </a>
         </div>
@@ -40,7 +43,7 @@ const contact = ({ darkMode = true }) => {
               trigger="hover"
               state="hover-roll"
               colors="primary:#ffffff,secondary:#30c9e8"
-              style={{ width: "50px", height: "50px"  }}
+              style={{ width: "50px", height: "50px" }}
             ></lord-icon>
           </a>
           <a href=" https://github.com/ritujha19" className="card-link p-4">
