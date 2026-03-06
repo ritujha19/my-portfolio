@@ -27,7 +27,7 @@ function App() {
     document.documentElement.classList.toggle('dark');
   }
   return (
-    <div className={darkMode ? 'bg-dark min-h-screen text-white' : 'bg-linear-to-br from-gray-50 to-gray-100 min-h-screen text-gray-900'}>
+    <div className={darkMode ? 'bg-dark min-h-screen text-white' : 'bg-white min-h-screen text-gray-900'}>
 
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       < Hero />

@@ -1,26 +1,57 @@
 import React from "react";
 
 const Header = ({ darkMode, toggleDarkMode }) => {
-  
   return (
     <>
-      <nav className={`flex justify-between items-center p-4 m-2 bg-transparent ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-        <img src="/RJ.png" alt="Logo" className="w-15 h-15 rounded-full object-cover" />
-        <ul className={`flex gap-4 border rounded-xl items-center text-xl ${darkMode ? 'border-gray-700 bg-gray-800 bg-opacity-50' : 'border-gray-300 bg-gray-100 bg-opacity-50'}`}>
-          <li className={`py-2 px-4 cursor-pointer transition-all duration-250 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-300'}`}>Home</li>
-          <li className={`py-2 px-4 cursor-pointer transition-all duration-250 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-300'}`}>About</li>
-          <li className={`py-2 px-4 cursor-pointer transition-all duration-250 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-300'}`}>Skills</li>
-          <li className={`py-2 px-4 cursor-pointer transition-all duration-250 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-300'}`}>Projects</li>
-          <li className={`py-2 px-4 cursor-pointer transition-all duration-250 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-300'}`}>Contact</li>
-        </ul>
-        
-        <button 
-          onClick={toggleDarkMode}
-          className={`py-2 px-4 rounded-lg font-semibold transition-all duration-250 ${darkMode ? 'bg-yellow-400 text-gray-900 hover:bg-yellow-300' : 'bg-gray-800 text-white hover:bg-gray-700'}`}
+      <div
+        className={`fixed top-0 left-0 right-0 flex justify-between items-center p-4 m-2   ${darkMode ? "text-white" : "text-gray-900"}`}
+      >
+        <img
+          src="/RJ.png"
+          alt="Logo"
+          className="w-12 h-12 rounded-full object-cover"
+        />
+        <nav
+          className={`flex gap-6  items-center text-lg rounded-full border backdrop-blur-md shadow-lg ${
+            darkMode
+              ? "border-gray-700 bg-black/30 text-white"
+              : "border-gray-300 bg-white/30 text-gray-800"
+          }`}
         >
-          {darkMode ? '☀️ Light' : '🌙 Dark'}
+          <a
+            className={`py-2 px-4 cursor-pointer transition-all duration-150 ${darkMode ? "hover:bg-white hover:text-black hover:rounded-2xl" : "hover:bg-black hover:text-white hover:rounded-2xl"}`}
+          >
+            Home
+          </a>
+          <a
+            className={`py-2 px-4 cursor-pointer transition-all duration-250 ${darkMode ? "hover:bg-white hover:text-black hover:rounded-2xl" : "hover:bg-black hover:text-white hover:rounded-2xl"}`}
+          >
+            About
+          </a>
+          <a
+            className={`py-2 px-4 cursor-pointer transition-all duration-250 ${darkMode ? "hover:bg-white hover:text-black hover:rounded-2xl" : "hover:bg-black hover:text-white hover:rounded-2xl"}`}
+          >
+            Skills
+          </a>
+          <a
+            className={`py-2 px-4 cursor-pointer transition-all duration-250 ${darkMode ? "hover:bg-white hover:text-black hover:rounded-2xl" : "hover:bg-black hover:text-white hover:rounded-2xl"}`}
+          >
+            Projects
+          </a>
+          <a
+            className={`py-2 px-4 cursor-pointer transition-all duration-250 ${darkMode ? "hover:bg-white hover:text-black hover:rounded-2xl" : "hover:bg-black hover:text-white hover:rounded-2xl"}`}
+          >
+            Contact
+          </a>
+        </nav>
+
+        <button
+          onClick={toggleDarkMode}
+          className={`px-3 py-2 mr-10 rounded-full  transition-all duration-250 ${darkMode ? "bg-white hover:bg-gray-300" : "bg-black hover:bg-gray-500 text-white"}`}
+        >
+          {darkMode ? "☀️" : "🌙"}
         </button>
-      </nav>
+      </div>
     </>
   );
 };
