@@ -21,15 +21,16 @@ const contact = ({ darkMode = true }) => {
           </h2>
           <a
             href="mailto:ritu05491@gmail.com"
-            className={`card-link btn px-6 py-3 w-fit rounded-full transition duration-300 flex items-center gap-2 text-center font-sans ${darkMode ? "bg-gray-700 text-white hover:bg-white hover:text-black hover:border-black border-2" : "bg-gray-800 text-white hover:bg-black hover:text-white"}`}
+            className={`card-link btn px-6 py-3 w-fit rounded-full transition duration-300 flex items-center gap-2 text-center font-sans ${darkMode ? "bg-gray-500 text-white hover:bg-gray-300 hover:text-black hover:border-black border-2" : " text-white hover:bg-gray-500 hover:text-white"}`}
           >
             {" "}
             Mail Me
             <lord-icon
-              src="https://cdn.lordicon.com/dpggoewm.json"
+              src="https://cdn.lordicon.com/vpbspaec.json"
               trigger="hover"
               state="in-assembly"
-              style={{ width: "30px", height: "30px" }}
+              colors="primary:#121331,secondary:#848484"
+              style={{ width: "40px", height: "40px" }}
             ></lord-icon>
           </a>
         </div>
