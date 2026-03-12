@@ -19,12 +19,13 @@ const DownloadCv = ({ darkMode = true }) => {
           <p className="text-gray-600 font-sans">PDF • Updated 2026</p>
           <a href={Ritu_Jha_CV} download={Ritu_Jha_CV} className="card-link ">
             <button
-              className={`btn px-6 py-3 w-fit rounded-full transition duration-300 flex items-center gap-2 text-center font-sans ${darkMode ? "bg-gray-500 text-white hover:bg-gray-300 hover:text-black hover:border-black border-2" : " text-white hover:bg-gray-500 hover:text-white"}`}
+              className={`btn px-6 py-3 w-fit rounded-full transition duration-300 flex items-center gap-2 text-center font-sans ${darkMode ? "bg-blue-600 text-white hover:bg-gray-300 hover:text-black hover:border-black border-2" : " text-white hover:bg-gray-500 hover:text-white"}`}
             >
               Download CV{" "}
               <lord-icon
                 src="https://cdn.lordicon.com/gqfozvrp.json"
                 trigger="hover"
+                colors="primary:#a39cf4"
                 style={{ width: "30px", height: "30px" }}
               ></lord-icon>
             </button>
