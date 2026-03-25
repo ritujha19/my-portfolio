@@ -4,7 +4,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
   return (
     <>
       <div
-        className={`fixed top-0 left-0 right-0 flex justify-between items-center p-4 m-2   ${darkMode ? "text-white" : "text-gray-900"}`}
+        className={`fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-4 m-2   ${darkMode ? "text-white" : "text-gray-900"}`}
       >
         <img
           src="/RJ.png"

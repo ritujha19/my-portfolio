@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Footor from "./components/Footor";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
+import { Route, Routes } from "react-router";
+import About from "./customComponent/About";
+import Contact from "./customComponent/Contact";
+import Footor from "./customComponent/Footor";
+import Header from "./customComponent/Header";
+import Hero from "./customComponent/Hero";
+import Projects from "./customComponent/Projects";
+import Skills from "./customComponent/Skills";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -35,11 +36,13 @@ function App() {
       }
     >
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      <Hero />
-      {/* <About />
-      <Skills />
-      <Projects />
-      <Contact /> */}
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Skills" element={<Skills />} />
+        <Route path="/Projects" element={<Projects />} />
+        <Route path="/Contact" element={<Contact />} />
+      </Routes>
       <Footor />
     </div>
   );
