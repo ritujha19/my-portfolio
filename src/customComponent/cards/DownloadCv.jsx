@@ -1,16 +1,29 @@
 import React from "react";
 import Ritu_Jha_CV from "../../assets/Ritu_Jha_CV.pdf";
 
-const DownloadCv = ({ darkMode = true }) => {
+const DownloadCv = ({darkMode = true}) => {
   return (
     <>
       <div
-        className={`card border rounded-xl p-6 m-10  w-fit h-full flex flex-row gap-10 ${darkMode ? "border-gray-700  bg-dark bg-opacity-50" : "border-gray-300 bg-gray-400 bg-opacity-50"}`}
-      >
-        <div className="flex flex-col gap-10 m-10 ">
-          <h4 className="card-title text-3xl font-bold mb-4 font-mono">
+  className={` rounded-xl p-5 w-fit h-full relative
+  `}
+>
+        <div className="flex flex-col gap-8">
+          <div className="flex flex-row gap-18 items-center">
+               <h4 className="card-title text-3xl font-bold mb-4 font-mono">
             Download My CV
           </h4>
+          <div>
+          <lord-icon
+            src="https://cdn.lordicon.com/ddumgjyf.json"
+            trigger="loop"
+            delay="1500"
+            colors="primary:#545454"
+            style={{ width: "150px", height: "150px" }}
+          ></lord-icon>
+        </div>
+          </div>
+         
           <hr className="text-gray-700 " />
           <p className="card-description text-xl text-gray-500 font-semibold font-mono italic">
             A quick overview of my skills,
@@ -19,7 +32,7 @@ const DownloadCv = ({ darkMode = true }) => {
           <p className="text-gray-600 font-sans">PDF • Updated 2026</p>
           <a href={Ritu_Jha_CV} download={Ritu_Jha_CV} className="card-link ">
             <button
-              className={`btn px-6 py-3 w-fit rounded-full transition duration-300 flex items-center gap-2 text-center font-sans ${darkMode ? "bg-blue-600 text-white hover:bg-gray-300 hover:text-black hover:border-black border-2" : " text-white hover:bg-gray-500 hover:text-white"}`}
+              className={`btn px-6 py-3 w-50 rounded-full transition duration-300 flex items-center gap-2 text-center font-sans bg-blue-700 text-white ${darkMode ? "hover:bg-neutral-200 hover:text-black " : "hover:bg-black hover:text-white"}`}
             >
               Download CV{" "}
               <lord-icon
@@ -31,15 +44,7 @@ const DownloadCv = ({ darkMode = true }) => {
             </button>
           </a>
         </div>
-        <div>
-          <lord-icon
-            src="https://cdn.lordicon.com/ddumgjyf.json"
-            trigger="loop"
-            delay="2000"
-            colors="primary:#545454"
-            style={{ width: "250px", height: "250px" }}
-          ></lord-icon>
-        </div>
+        
       </div>
     </>
   );

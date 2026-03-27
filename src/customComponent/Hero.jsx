@@ -1,8 +1,27 @@
 import React from 'react'
 import Contact from './cards/ContactCards'
-import DownloadCv from './cards/downloadCv'
+import DownloadCv from './cards/DownloadCv'
 import Projects from './Projects'
+import { HoverEffect } from "../components/card-hover-effect";
 
+const items = [
+  {
+    content: <Contact darkMode={true} />,
+    link: "#contact"  
+  },
+  {
+    content: <DownloadCv darkMode={true} />,
+    link: "#download-cv"
+  }
+];
+
+export function CardHoverEffectDemo() {
+  return (
+    <div className="flex flex-row" >
+      <HoverEffect items={items} />
+    </div>
+  );
+}
 
 const Hero = () => {
   return (
@@ -14,10 +33,7 @@ const Hero = () => {
         <p className='pt-15 text-5xl font-mono text-gray-600'>building web applications and</p>
         <p className='text-3xl italic mt-5 font-mono'>expanding into full stack development.</p>
       </div>
-      <div className="cardSection flex flex-row flex-wrap justify-center gap-10 pt-20">
-      < Contact/>
-      < DownloadCv/>
-      </div>
+      <CardHoverEffectDemo />
       <div>
         < Projects/>
       </div>

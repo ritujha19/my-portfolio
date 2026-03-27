@@ -1,13 +1,14 @@
 import React from "react";
 
-const contact = ({ darkMode = true }) => {
+const contact = () => {
   return (
     <>
       <div
-        className={`card border rounded-xl p-6 m-10  w-100 h-full flex flex-col gap-10 ${darkMode ? "border-gray-700  bg-dark bg-opacity-50" : "border-gray-300 bg-gray-400 bg-opacity-50"}`}
-      >
+  className={` p-6 w-100  h-full flex flex-col gap-10 relative
+    `}
+>
         <div
-          className={`flex items-center px-2 gap-1 border rounded-2xl w-fit mb-4 font-sans ${darkMode ? "border-gray-600 text-gray-500 bg-transparent" : "border-gray-400 text-gray-300 "}`}
+          className={`flex items-center px-2 gap-1 border rounded-2xl w-fit mb-4 font-sans`}
         >
           <strong className="text-green-700 text-2xl pb-1">&bull;</strong>
           <p className="text-xs ">available for job opportunities</p>
@@ -21,7 +22,7 @@ const contact = ({ darkMode = true }) => {
           </h2>
           <a
             href="mailto:ritu05491@gmail.com"
-            className={`card-link btn px-6 py-3 w-fit rounded-full transition duration-300 flex items-center gap-2 text-center font-sans ${darkMode ? "bg-gray-500 text-white hover:bg-gray-300 hover:text-black hover:border-black border-2" : " text-white hover:bg-gray-500 hover:text-white"}`}
+            className={`card-link btn px-3 py-2 w-fit rounded-full transition duration-300 flex items-center gap-2 text-center font-sans bg-gray-400 text-white hover:bg-gray-300 hover:text-black `}
           >
             {" "}
             Mail Me
