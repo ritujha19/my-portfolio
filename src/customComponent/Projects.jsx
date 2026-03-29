@@ -9,21 +9,37 @@ const Projects = () => {
       </div>
       <ProjectCard
         title="StayYatra- Travel Booking Website"
-        description={<>StayYatra is a full stack travel booking application that allows users to register, login and book hotels. <br /> <strong className="semi-bold">note:</strong> It is a backend-focused demo project inspired by Airbnb, created while learning backend development.</>}
-        techStack={["Node.js", "Express", "MongoDB", "Bootstrap", "EJS", "Joi", "REST API", "Passport.js"]}
+        description={
+          <>
+            StayYatra is a full stack travel booking application that allows
+            users to register, login and book hotels. <br />{" "}
+            <strong className="semi-bold">note:</strong> It is a backend-focused
+            demo project inspired by Airbnb, created while learning backend
+            development.
+          </>
+        }
+        techStack={[
+          "Node.js",
+          "Express",
+          "MongoDB",
+          "Bootstrap",
+          "EJS",
+          "Joi",
+          "REST API",
+          "Passport.js",
+        ]}
         features={[
           "User authentication",
           "Session management",
           "Hotel booking system",
           "Booking history",
           "Responsive design",
-          "Database storage"
+          "Database storage",
         ]}
-        demoLink ="https://stayyatra.onrender.com/"
+        demoLink="https://stayyatra.onrender.com/"
         githubLink="https://github.com/ritujha19/StayYatra.git"
-        thumbnail1 = "/Screenshot 1.png"
-        thumbnail2 = "/Screenshot 2.png"
-
+        thumbnail1="/Screenshot 1.png"
+        thumbnail2="/Screenshot 2.png"
       />
       <ProjectCard
         title="Morgenlicht Café – Landing Page"

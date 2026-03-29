@@ -18,27 +18,32 @@ const Header = ({ darkMode, toggleDarkMode }) => {
               : "border-gray-300 bg-white/30 text-gray-800"
           }`}
         >
-          <a href="#Home"
+          <a
+            href="\"
             className={`py-2 px-4 cursor-pointer transition-all duration-150 ${darkMode ? "hover:bg-white hover:text-black hover:rounded-2xl" : "hover:bg-black hover:text-white hover:rounded-2xl"}`}
           >
             Home
           </a>
-          <a href="#About"
+          <a
+            href="About"
             className={`py-2 px-4 cursor-pointer transition-all duration-250 ${darkMode ? "hover:bg-white hover:text-black hover:rounded-2xl" : "hover:bg-black hover:text-white hover:rounded-2xl"}`}
           >
             About
           </a>
-          <a href="#Skills"
+          <a
+            href="Skills"
             className={`py-2 px-4 cursor-pointer transition-all duration-250 ${darkMode ? "hover:bg-white hover:text-black hover:rounded-2xl" : "hover:bg-black hover:text-white hover:rounded-2xl"}`}
           >
             Skills
           </a>
-          <a href="#Projects"
+          <a
+            href="Projects"
             className={`py-2 px-4 cursor-pointer transition-all duration-250 ${darkMode ? "hover:bg-white hover:text-black hover:rounded-2xl" : "hover:bg-black hover:text-white hover:rounded-2xl"}`}
           >
             Projects
           </a>
-          <a href="#Contact"
+          <a
+            href="Contact"
             className={`py-2 px-4 cursor-pointer transition-all duration-250 ${darkMode ? "hover:bg-white hover:text-black hover:rounded-2xl" : "hover:bg-black hover:text-white hover:rounded-2xl"}`}
           >
             Contact

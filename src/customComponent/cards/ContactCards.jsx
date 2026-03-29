@@ -4,9 +4,9 @@ const contact = () => {
   return (
     <>
       <div
-  className={` p-5  flex flex-col gap-10
+        className={` p-5  flex flex-col gap-10
     `}
->
+      >
         <div
           className={`flex items-center  gap-1 border rounded-2xl w-fit px-2 border-gray-500 font-sans`}
         >

@@ -16,21 +16,21 @@
   --grad4: #22d3ee;
 }
 
-
-
-html{
+html {
   scroll-behavior: smooth;
 }
 
 body {
- font-family: 'times new roman', sans-serif;
+  font-family: "times new roman", sans-serif;
 }
 
-li:hover{
+li:hover {
   color: #0d1117;
   background-color: #e6edf3;
   border-radius: 8px;
-  transition: background-color 0.25s, color 0.25s;
+  transition:
+    background-color 0.25s,
+    color 0.25s;
 }
 
 /* Smooth button hover */
@@ -42,7 +42,3 @@ li:hover{
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
-
-
-
-

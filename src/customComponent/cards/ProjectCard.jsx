@@ -3,7 +3,6 @@ import { CardBody, CardContainer, CardItem } from "../../components/3d-card";
 
 const ProjectCard = (props) => {
   return (
-    
     <CardContainer className="inter-var">
       <CardBody className="flex flex-col md:flex-row gap-6 bg-gray-50 relative group/card dark:bg-black border rounded-xl p-6 w-220 h-auto">
         <div className="flex-1">
@@ -33,7 +32,10 @@ const ProjectCard = (props) => {
             <h3 className="font-semibold mb-2">Tech Stack</h3>
             <div className="flex flex-wrap gap-2">
               {props.techStack.map((tech, index) => (
-                <span key={index} className="px-3 py-1 bg-gray-200 dark:bg-gray-800 rounded-lg text-sm">
+                <span
+                  key={index}
+                  className="px-3 py-1 bg-gray-200 dark:bg-gray-800 rounded-lg text-sm"
+                >
                   {tech}
                 </span>
               ))}

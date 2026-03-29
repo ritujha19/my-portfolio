@@ -1,28 +1,26 @@
 import React from "react";
 import Ritu_Jha_CV from "../../assets/Ritu_Jha_CV.pdf";
 
-const DownloadCv = ({darkMode = true}) => {
+const DownloadCv = ({ darkMode = true }) => {
   return (
     <>
-      <div
-  className= "p-5" 
->
+      <div className="p-5">
         <div className="flex flex-col gap-8">
           <div className="flex flex-row gap-18 items-center">
-               <h4 className="card-title text-3xl font-bold mb-4 font-mono">
-            Download My CV
-          </h4>
-          <div>
-          <lord-icon
-            src="https://cdn.lordicon.com/ddumgjyf.json"
-            trigger="loop"
-            delay="1500"
-            colors="primary:#545454"
-            style={{ width: "150px", height: "150px" }}
-          ></lord-icon>
-        </div>
+            <h4 className="card-title text-3xl font-bold mb-4 font-mono">
+              Download My CV
+            </h4>
+            <div>
+              <lord-icon
+                src="https://cdn.lordicon.com/ddumgjyf.json"
+                trigger="loop"
+                delay="1500"
+                colors="primary:#545454"
+                style={{ width: "150px", height: "150px" }}
+              ></lord-icon>
+            </div>
           </div>
-         
+
           <hr className="text-gray-700 " />
           <p className="card-description text-xl text-gray-500 font-semibold font-mono italic">
             A quick overview of my skills,
@@ -43,7 +41,6 @@ const DownloadCv = ({darkMode = true}) => {
             </button>
           </a>
         </div>
-        
       </div>
     </>
   );
