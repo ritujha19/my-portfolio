@@ -4,11 +4,11 @@ const contact = () => {
   return (
     <>
       <div
-  className={` p-6 w-100  h-full flex flex-col gap-10 relative
+  className={` p-5  flex flex-col gap-10
     `}
 >
         <div
-          className={`flex items-center px-2 gap-1 border rounded-2xl w-fit mb-4 font-sans`}
+          className={`flex items-center  gap-1 border rounded-2xl w-fit px-2 border-gray-500 font-sans`}
         >
           <strong className="text-green-700 text-2xl pb-1">&bull;</strong>
           <p className="text-xs ">available for job opportunities</p>

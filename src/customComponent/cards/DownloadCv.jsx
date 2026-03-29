@@ -5,8 +5,7 @@ const DownloadCv = ({darkMode = true}) => {
   return (
     <>
       <div
-  className={` rounded-xl p-5 w-fit h-full relative
-  `}
+  className= "p-5" 
 >
         <div className="flex flex-col gap-8">
           <div className="flex flex-row gap-18 items-center">

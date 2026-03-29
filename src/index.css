@@ -1,9 +1,22 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-.dark{
-  color-scheme: dark;
+:root {
+  --grad1: #2563eb;
+  --grad2: #7c3aed;
+  --grad3: #db2777;
+  --grad4: #06b6d4;
 }
+
+.dark {
+  color-scheme: dark;
+  --grad1: #38bdf8;
+  --grad2: #818cf8;
+  --grad3: #e879f9;
+  --grad4: #22d3ee;
+}
+
+
 
 html{
   scroll-behavior: smooth;

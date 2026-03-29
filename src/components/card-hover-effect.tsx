@@ -27,13 +27,13 @@ export const HoverEffect = ({
               <motion.span
                 className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/80 block  rounded-3xl"
                 style={{boxShadow:
-                  "0 0 0 2px #475569, 0 0 20px 4px rgba(71, 85, 105, 0.6)"
+                  "0 0 0 1px #475569, 0 0 20px 4px rgba(71, 85, 105, 0.6)"
                 }}
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
                   opacity: 1,
-                  transition: { duration: 0.25 },
+                  transition: { duration: 0.25},
                 }}
                 exit={{
                   opacity: 0,

@@ -3,6 +3,15 @@ import Contact from './cards/ContactCards'
 import DownloadCv from './cards/DownloadCv'
 import Projects from './Projects'
 import { HoverEffect } from "../components/card-hover-effect";
+import { TextHoverEffect } from "../components/text-hover-effect";
+ 
+export function TextHoverEffectDemo() {
+  return (
+    <div  className=" flex items-center justify-center">
+   <TextHoverEffect />
+</div>
+  );
+}
 
 const items = [
   {
@@ -26,12 +35,12 @@ export function CardHoverEffectDemo() {
 const Hero = () => {
   return (
     <>
-      <div className='w-full h-full text-center p-4 mb-15' id='Home'>
-        <p className='pt-25 pb-4 text-xl'>Hi, I'm</p>
-        <div className='w-full text-9xl '>RITU JHA</div>
-        <p className='pt-10 text-3xl text-gray-400'>Exploring Full-Stack Development</p>
-        <p className='pt-15 text-5xl font-mono text-gray-600'>building web applications and</p>
-        <p className='text-3xl italic mt-5 font-mono'>expanding into full stack development.</p>
+      <div className='w-full h-full text-center p-4' id='Home'>
+      <p className='text-2xl mt-20'>Hi, I'm</p>
+        <TextHoverEffect text="RITU JHA" className="bold " />
+        <p className='text-3xl text-gray-300 pb-5'>Exploring Full-Stack Development |</p>
+        <p className='text-5xl pb-3 font-mono text-gray-500'>building web applications and</p>
+        <p className='text-3xl italic pt-3 font-mono'>expanding into full stack development.</p>
       </div>
       <CardHoverEffectDemo />
       <div>
