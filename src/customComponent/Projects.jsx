@@ -37,8 +37,8 @@ const Projects = () => {
         ]}
         githubLink="https://github.com/ritujha19/coffee-cafe.git"
         demoLink="https://ritujha19.github.io/coffee-cafe/"
-        thumbnail1="/Screenshot 3.png"
-        thumbnail2="/Screenshot 4.png"
+        thumbnail1="/Screenshot 4.png"
+        thumbnail2="/Screenshot 3.png"
       />
     </>
   );

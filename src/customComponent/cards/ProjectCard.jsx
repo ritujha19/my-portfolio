@@ -16,14 +16,14 @@ const ProjectCard = (props) => {
           <CardItem
             as="p"
             translateZ="25"
-            className="text-neutral-500 text-l max-w-sm mt-2 dark:text-neutral-300"
+            className="text-neutral-500 text-lg max-w-sm mt-2 dark:text-neutral-300"
           >
             {props.description}
           </CardItem>
           <CardItem translateZ="25" className="mt-4">
-            <h3 className="font-semibold text-lg mb-2">Features</h3>
+            <h3 className="font-semibold text-xl mb-2">Features</h3>
 
-            <ul className="list-disc pl-5 text-neutral-500 dark:text-neutral-300 space-y-1">
+            <ul className="list-disc pl-5 text-neutral-500 dark:text-neutral-300 space-y-1 text-lg">
               {props.features.map((feature, index) => (
                 <li key={index}>{feature}</li>
               ))}
@@ -60,19 +60,19 @@ const ProjectCard = (props) => {
             </CardItem>
           </div>
         </div>
-        <div className="flex-1 flex-col">
-          <CardItem translateZ="60" className="w-full mt-4">
+        <div className="flex flex-col gap-10">
+          <CardItem translateZ="60" className="w-100 mt-4">
             <img
               src={props.thumbnail1}
               className="h-50 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-              alt="stayyatra's first thumbnail"
+              alt="first thumbnail"
             />
           </CardItem>
-          <CardItem translateZ="60" className="w-full mt-4">
+          <CardItem translateZ="60" className="w-100 mt-4">
             <img
               src={props.thumbnail2}
               className="h-50 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-              alt="stayyatra's second thumbnail"
+              alt="second thumbnail"
             />
           </CardItem>
         </div>
