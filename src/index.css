@@ -15,14 +15,27 @@
   --grad3: #e879f9;
   --grad4: #22d3ee;
 }
+@theme inline {
+  --animate-aurora: aurora 60s linear infinite;
+  @keyframes aurora {
+    from {
+      background-position:
+        50% 50%,
+        50% 50%;
+    }
+    to {
+      background-position:
+        350% 50%,
+        350% 50%;
+    }
+  }
+}
+
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: "times new roman", sans-serif;
-}
 
 li:hover {
   color: #0d1117;

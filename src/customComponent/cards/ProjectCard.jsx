@@ -4,7 +4,7 @@ import { CardBody, CardContainer, CardItem } from "../../components/3d-card";
 const ProjectCard = (props) => {
   return (
     <CardContainer className="inter-var">
-      <CardBody className="flex flex-col md:flex-row gap-6 bg-gray-50 relative group/card dark:bg-black border rounded-xl p-6 w-220 h-auto">
+      <CardBody className="flex flex-col md:flex-row gap-6 bg-gray-50 relative group/card dark:bg-black border rounded-xl p-6 w-200 h-auto">
         <div className="flex-1">
           <CardItem
             translateZ="20"
@@ -15,14 +15,14 @@ const ProjectCard = (props) => {
           <CardItem
             as="p"
             translateZ="25"
-            className="text-neutral-500 text-lg max-w-sm mt-2 dark:text-neutral-300"
+            className="text-neutral-500 text-md max-w-sm mt-2 dark:text-neutral-300"
           >
             {props.description}
           </CardItem>
           <CardItem translateZ="25" className="mt-4">
             <h3 className="font-semibold text-xl mb-2">Features</h3>
 
-            <ul className="list-disc pl-5 text-neutral-500 dark:text-neutral-300 space-y-1 text-lg">
+            <ul className="list-disc pl-5 text-neutral-500 dark:text-neutral-300 space-y-1 text-md">
               {props.features.map((feature, index) => (
                 <li key={index}>{feature}</li>
               ))}
@@ -62,21 +62,16 @@ const ProjectCard = (props) => {
             </CardItem>
           </div>
         </div>
-        <div className="flex flex-col gap-10">
-          <CardItem translateZ="60" className="w-100 mt-4">
-            <img
-              src={props.thumbnail1}
-              className="h-50 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-              alt="first thumbnail"
-            />
-          </CardItem>
-          <CardItem translateZ="60" className="w-100 mt-4">
-            <img
-              src={props.thumbnail2}
-              className="h-50 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-              alt="second thumbnail"
-            />
-          </CardItem>
+        <div className="flex flex-col gap-5 mt-10">
+          {props.images?.map((img, index) => (
+            <CardItem key={index} translateZ="60" className="w-100 mt-4">
+              <img
+                src={img}
+                className="h-50 w-full object-cover rounded-xl"
+                alt={`thumbnail ${index}`}
+              />
+            </CardItem>
+          ))}
         </div>
       </CardBody>
     </CardContainer>

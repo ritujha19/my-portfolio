@@ -10,6 +10,7 @@ import Hero from "./customComponent/Hero";
 import Projects from "./customComponent/Projects";
 import Skills from "./customComponent/Skills";
 
+
 function App() {
   const [darkMode, setDarkMode] = useState(true);
 
@@ -27,25 +28,29 @@ function App() {
     setDarkMode(newMode);
     document.documentElement.classList.toggle("dark");
   };
+ 
   return (
-    <div
-      className={
+  <div  className={
         darkMode
           ? "bg-dark min-h-screen text-white"
           : "bg-white min-h-screen text-gray-900"
-      }
-    >
-      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      <Routes>
-        <Route path="/" element={<Hero />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Skills" element={<Skills />} />
-        <Route path="/Projects" element={<Projects />} />
-        <Route path="/Contact" element={<Contact />} />
-      </Routes>
-      <Footor />
-    </div>
-  );
+      }>
+    
+      <div className="relative z-20 w-full">
+        <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        <main>
+          <Routes>
+            <Route path="/" element={<Hero />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/Skills" element={<Skills />} />
+            <Route path="/Projects" element={<Projects />} />
+            <Route path="/Contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footor />
+      </div>
+  </div>
+);
 }
 
 export default App;
