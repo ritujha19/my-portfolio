@@ -21,6 +21,7 @@ export function AuroraBackgroundDemo() {
         <div className="w-full h-full text-3xl md:text-9xl mt-20 pb-6 dark:text-white text-center">
           <div id="Projects">
             <h1 className="font-[Space Grotesk]"> MY WORKS</h1>
+            <p className="font-mono text-2xl pt-10">What I’ve done so far</p>
           </div>
         </div>
       </motion.div>
