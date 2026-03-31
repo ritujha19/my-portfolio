@@ -40,7 +40,7 @@ function App() {
         <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <main>
           <Routes>
-            <Route path="/" element={<Hero />} />
+            <Route path="/"  element={<Hero />} />
             <Route path="/About" element={<About />} />
             <Route path="/Skills" element={<Skills />} />
             <Route path="/Projects" element={<Projects />} />

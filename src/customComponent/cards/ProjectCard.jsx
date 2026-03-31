@@ -56,7 +56,7 @@ const ProjectCard = (props) => {
               as="a"
               href={props.githubLink}
               target="_blank"
-              className="px-4 py-2 rounded-xl bg-white text-black font-bold"
+              className="px-4 py-2 rounded-xl bg-neutral-800 text-white dark:bg-white dark:text-black font-bold"
             >
               GitHub
             </CardItem>

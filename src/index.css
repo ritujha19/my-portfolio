@@ -31,6 +31,19 @@
   }
 }
 
+.gradient-text-animated {
+  background: linear-gradient(to left, var(--grad1), var(--grad2), var(--grad3), var(--grad4));
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shine 15s linear infinite;
+}
+
+@keyframes shine {
+  0%   { background-position: 0%; }
+  100% { background-position: 200%; }
+}
 
 html {
   scroll-behavior: smooth;
