@@ -4,6 +4,7 @@ import DownloadCv from "./cards/DownloadCv";
 import ProjectCard from "./cards/ProjectCard";
 import { HoverEffect } from "../components/card-hover-effect";
 import { TextHoverEffect } from "../components/text-hover-effect";
+import { BackgroundBeams } from "../components/background-beams";
 import Skills from "./Skills";
 
 export function TextHoverEffectDemo() {
@@ -33,10 +34,10 @@ export function CardHoverEffectDemo() {
   );
 }
 
-const Hero = () => {
+export function BackgroundBeamsDemo() {
   return (
-    <>
-      <div className="w-full h-full text-center p-4" id="Home" data-aos="fade-up">
+    <div className="h-full w-full  bg-neutral-900 relative  antialiased">
+      <div className="w-full h-full text-center p-4 relative z-10" id="Home" data-aos="fade-up">
         <p className="text-2xl mt-20">Hi, I'm</p>
         <TextHoverEffect text="RITU JHA" className="bold" />
         <p className="text-3xl text-gray-300 pb-5" data-aos="fade-up">
@@ -49,6 +50,15 @@ const Hero = () => {
           expanding into full stack development.
         </p>
       </div>
+      <BackgroundBeams />
+    </div>
+  );
+}
+
+const Hero = () => {
+  return (
+    <>
+      <BackgroundBeamsDemo />
       <CardHoverEffectDemo  />
         <ProjectCard className="pb-6"
         title="StayYatra- Travel Booking Website"

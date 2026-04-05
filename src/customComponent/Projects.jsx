@@ -106,7 +106,7 @@ const Projects = () => {
         />
       </div>
       <div className="bg-neutral-50 dark:bg-neutral-900 flex items-center justify-center gap-6 p-4">
-        <p> view more of my works by checking my github profile</p>
+        <p> view more of my practice works by checking my github profile</p>
         <button className="px-2 py-2 rounded-xl bg-black text-white font-bold hover:bg-gray-600 dark:bg-white dark:text-black dark:hover:bg-gray-300 ">
           <a href="https://github.com/ritujha19">github profile</a>
         </button>

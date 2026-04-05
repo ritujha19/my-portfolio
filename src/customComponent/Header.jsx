@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom"; // Import NavLink
+import {IconMoon , IconSun} from "@tabler/icons-react";
 
 const Header = ({ darkMode, toggleDarkMode }) => {
   // Define a helper function to keep the JSX clean
@@ -19,7 +20,6 @@ const Header = ({ darkMode, toggleDarkMode }) => {
       }`}>
         <NavLink to="/" className={navLinkStyles}>Home</NavLink>
         <NavLink to="/About" className={navLinkStyles}>About</NavLink>
-        <NavLink to="/Skills" className={navLinkStyles}>Skills</NavLink>
         <NavLink to="/Projects" className={navLinkStyles}>Projects</NavLink>
         <NavLink to="/Contact" className={navLinkStyles}>Contact</NavLink>
       </nav>

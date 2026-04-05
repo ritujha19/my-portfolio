@@ -1,6 +1,5 @@
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "../../components/3d-card";
-
 const ProjectCard = (props) => {
   return (
     <CardContainer className="inter-var">

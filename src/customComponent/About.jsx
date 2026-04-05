@@ -39,9 +39,9 @@ const About = () => {
         >
           <div className="200">
             <h1 className="text-4xl pb-10 font-mono dark:text-white text-black">
-              Hey! Nice to meet you,I am{" "}
+              Hey! Nice to meet you,
               <span className="font-serif italic gradient-text-animated">
-                Ritu
+                I am Ritu
               </span>
             </h1>
           </div>
