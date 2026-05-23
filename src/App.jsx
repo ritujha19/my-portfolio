@@ -9,7 +9,6 @@ import Header from "./customComponent/Header";
 import Hero from "./customComponent/Hero";
 import Projects from "./customComponent/Projects";
 import Skills from "./customComponent/Skills";
-import ScrollToTop from "./components/scrollToTop";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -37,7 +36,6 @@ function App() {
           : "bg-white min-h-screen text-gray-900"
       }
     >
-      < ScrollToTop/>
       <div className="relative z-20 w-full">
         <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <main>

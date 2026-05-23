@@ -68,6 +68,9 @@ const Hero = () => {
     <div className="bg-neutral-200 dark:bg-neutral-900">
       <BackgroundBeamsDemo />
       <CardHoverEffectDemo />
+      <h2 className="text-6xl font-bold text-center mt-30 mb-20 font-serif text-capitalize" data-aos="zoom-in">
+        Showcase
+      </h2>
       <ProjectCard
         className="pb-6"
         title="StayYatra- Travel Booking Website"
@@ -93,7 +96,7 @@ const Hero = () => {
       <div className="flex justify-center m-4">
         <a
           href="/projects"
-          className="px-6 py-3 border border-gray-300 rounded-xl hover:bg-white hover:text-black transition"
+          className="px-6 py-3 border border-gray-300 rounded-xl bg-yellow-100 text-black  hover:bg-white hover:text-black transition"
         >
           View More Projects →
         </a>
