@@ -59,9 +59,9 @@ export function InfiniteMovingCardsDemo() {
     <p className="text-lg text-center text-gray-600 dark:text-gray-400 font-sans" data-aos="zoom-in" data-aos-delay="200">
       Tools and technologies I work with.
     </p>
-    <div className="h-100 rounded-md flex flex-col antialiased bg-neutral-200 dark:bg-neutral-900 dark:bg-grid-white/[0.05] items-center justify-center">
-      <InfiniteMovingCards items={[...Skills1, ...Skills1]} direction="left" speed="medium" />
-      <InfiniteMovingCards items={[...Skills2, ...Skills2]} direction="right" speed="medium" />
+    <div className="h-80 rounded-md flex flex-col antialiased bg-neutral-200 dark:bg-neutral-900 dark:bg-grid-white/[0.05] items-center justify-center cursor-pointer">
+      <InfiniteMovingCards items={[...Skills1, ...Skills1]} direction="left" speed="normal" />
+      <InfiniteMovingCards items={[...Skills2, ...Skills2]} direction="right" speed="normal" />
     </div>
     </>
      

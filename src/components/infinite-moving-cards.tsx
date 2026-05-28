@@ -81,7 +81,7 @@ export const InfiniteMovingCards = ({
         )}>
         {items.map((item: CardItem, idx: number) => (
           <li
-            className="relative max-w-full shrink-0 rounded-lg border border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] px-5 py-2 dark:border-zinc-700 dark:bg-[linear-gradient(180deg,#27272a,#18181b)] "
+            className="relative max-w-full shrink-0 rounded-lg border border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] px-5 py-2 dark:border-zinc-700 dark:bg-[linear-gradient(180deg,#27272a,#18181b)]"
             key={idx}>
             <span className="text-md font-medium text-center text-neutral-600 dark:text-gray-200">
               {item.title}
