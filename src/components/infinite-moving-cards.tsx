@@ -1,11 +1,30 @@
 "use client";
-
 import { cn } from "../lib/utils";
 import React, { useEffect, useState } from "react";
+import * as Icons from "@tabler/icons-react";
 
 interface CardItem {
   title: string;
+  iconName?: string;
 }
+
+const iconMap: { [key: string]: React.ComponentType<{ size?: number }> } = {
+  IconHtml5: Icons.IconBrandHtml5,
+  IconCss3: Icons.IconBrandCss3,
+  IconJavascript: Icons.IconBrandJavascript,
+  IconReact: Icons.IconBrandReact,
+  IconTailwind: Icons.IconBrandTailwind,
+  IconBootstrap: Icons.IconBrandBootstrap,
+  IconDesktop: Icons.IconDeviceDesktop,
+  IconGit: Icons.IconBrandGit,
+  IconGithub: Icons.IconBrandGithub,
+  IconNodejs: Icons.IconBrandNodejs,
+  IconServer: Icons.IconServer,
+  IconCode: Icons.IconCode,
+  IconMongodb: Icons.IconBrandMongodb,
+  IconLock: Icons.IconLock,
+  IconSession: Icons.IconSection,
+};
 
 interface InfiniteMovingCardsProps {
   items: CardItem[];
@@ -79,15 +98,25 @@ export const InfiniteMovingCards = ({
           start && "animate-scroll",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}>
-        {items.map((item: CardItem, idx: number) => (
-          <li
-            className="relative max-w-full shrink-0 rounded-lg border border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] px-5 py-2 dark:border-zinc-700 dark:bg-[linear-gradient(180deg,#27272a,#18181b)]"
-            key={idx}>
-            <span className="text-md font-medium text-center text-neutral-600 dark:text-gray-200">
-              {item.title}
-            </span>
-          </li>
-        ))}
+        {items.map((item: CardItem, idx: number) => {
+          const IconComponent = item.iconName ? iconMap[item.iconName] : null;
+          return (
+            <li
+              className="relative max-w-full shrink-0 rounded-lg border border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] px-5 py-2 dark:border-zinc-700 dark:bg-[linear-gradient(180deg,#27272a,#18181b)]"
+              key={idx}>
+              <div className="flex items-center justify-center gap-2">
+                {IconComponent && (
+                  <div className="text-neutral-600 dark:text-gray-300">
+                    <IconComponent size={20} />
+                  </div>
+                )}
+                <span className="text-md font-medium text-center text-neutral-600 dark:text-gray-200">
+                  {item.title}
+                </span>
+              </div>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
