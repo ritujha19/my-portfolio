@@ -37,7 +37,7 @@ const contact = () => {
         </div>
         <div id="socials" className="flex justify-center">
           <a
-            href="https://www.linkedin.com/in/ritu-rani-b18992322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            href="https://www.linkedin.com/in/ritu-rani-b18992322"
             className="card-link p-4"
           >
             <lord-icon
