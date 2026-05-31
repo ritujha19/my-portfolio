@@ -43,7 +43,7 @@ const Contact = () => {
     <div className="flex flex-row gap-4 items-center justify-around py-40 dark:bg-neutral-900 dark:text-white bg-neutral-50 text-black" >
         <div className="w-150 h-full text-left pl-20 text-3xl font-serif grid grid-cols-1 gap-4" data-aos="fade-right" data-aos-delay="100" >
             <TextGenerateEffectDemo/>
-            <img src="/public/ChatGPT Image May 29, 2026, 08_18_12 PM.png" alt="developer" className="w-120 h-100 object-contain" data-aos="fade-right" data-aos-delay="150"/>
+            <img src="/ChatGPT Image May 29, 2026, 08_18_12 PM.png" alt="developer" className="w-120 h-100 object-contain" data-aos="fade-right" data-aos-delay="150"/>
         </div>
         <div className="pr-30" data-aos="fade-left" data-aos-delay="100">
             <MessageForm />

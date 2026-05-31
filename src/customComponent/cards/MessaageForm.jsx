@@ -8,6 +8,7 @@ import {
   IconBrandGithub,
   IconBrandLinkedin,
   IconBrandMailgun,
+  IconLoader,
 } from "@tabler/icons-react";
 
 export function MessageForm() {
@@ -17,6 +18,8 @@ export function MessageForm() {
     subject: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     setformData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -40,6 +43,8 @@ export function MessageForm() {
       });
     } catch (error) {
       console.error("Error submitting form:", error);
+    } finally {
+      setLoading(false);
     }
   };
   return (
@@ -106,8 +111,17 @@ export function MessageForm() {
         <button
           className="group/btn relative block h-10 w-full rounded-md bg-linear-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
           type="submit"
+          disabled={loading}
         >
-          Submit
+          {loading ? (
+            <div className="flex items-center gap-2">
+              <IconLoader className="h-4 w-4 animate-spin" />
+              <span>Sending...</span>
+            </div>
+          ) : (
+            "Submit"
+          )}
+
           <BottomGradient />
         </button>
 
