@@ -9,9 +9,6 @@ dotenv.config();
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-console.log("Resend API Key:", process.env.RESEND_API_KEY);
-console.log("Email from .env:", process.env.EMAIL);
-
 const app = express();
 app.use(cors());
 app.use(express.json());
