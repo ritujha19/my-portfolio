@@ -9,7 +9,15 @@ import {
   IconBrandLinkedin,
   IconBrandMailgun,
   IconLoader,
+  IconCircleCheck,
+  IconProgressAlert,
 } from "@tabler/icons-react";
+import {
+  Dialog,
+  DialogBackdrop,
+  DialogPanel,
+  DialogTitle,
+} from "@headlessui/react";
 
 export function MessageForm() {
   const [formData, setformData] = useState({
@@ -18,23 +26,34 @@ export function MessageForm() {
     subject: "",
     message: "",
   });
+  // dialog states for send message status
+  const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [confirmed, setConfirmed] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleChange = (e) => {
     setformData({ ...formData, [e.target.name]: e.target.value });
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Form submitted", formData);
     try {
+      setOpen(true);
+      setLoading(true);
+      setConfirmed(false);
+      setError(false);
+
       const response = await fetch("http://localhost:5000/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-      const data = await response.json();
-      console.log("Response from backend:", data);
-      alert("Message sent successfully!");
+      await response.json();
+
+      setLoading(false);
+      setConfirmed(true);
       setformData({
         name: "",
         email: "",
@@ -43,8 +62,9 @@ export function MessageForm() {
       });
     } catch (error) {
       console.error("Error submitting form:", error);
-    } finally {
       setLoading(false);
+      setConfirmed(false);
+      setError(true);
     }
   };
   return (
@@ -107,23 +127,15 @@ export function MessageForm() {
             required
           />
         </LabelInputContainer>
-
         <button
-          className="group/btn relative block h-10 w-full rounded-md bg-linear-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
           type="submit"
           disabled={loading}
+          className="group/btn relative h-10 w-full rounded-md bg-gray-200 px-3 py-2 font-medium text-black dark:bg-zinc-900 dark:text-white"
         >
-          {loading ? (
-            <div className="flex items-center gap-2">
-              <IconLoader className="h-4 w-4 animate-spin" />
-              <span>Sending...</span>
-            </div>
-          ) : (
-            "Submit"
-          )}
-
-          <BottomGradient />
+          {loading ? "Sending..." : "Send Message"}
         </button>
+
+        <BottomGradient />
 
         <div className="my-8 h-px w-full bg-linear-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
 
@@ -156,6 +168,60 @@ export function MessageForm() {
           </a>
         </div>
       </form>
+      <Dialog open={open} onClose={() => {}} className="relative z-50">
+        <DialogBackdrop className="fixed inset-0 bg-black/50" />
+
+        <div className="fixed inset-0 flex items-center justify-center p-4">
+          <DialogPanel className="w-full max-w-md rounded-xl bg-zinc-900 p-6 text-white shadow-xl">
+            {loading ? (
+              <div className="flex flex-col items-center gap-4">
+                <IconLoader className="h-10 w-10 animate-spin" />
+                <h3 className="text-xl font-semibold">Sending Message...</h3>
+                <p className="text-sm text-gray-400">
+                  Please wait while I deliver your message.
+                </p>
+              </div>
+            ) : confirmed ? (
+              <div className="flex flex-col items-center gap-4">
+                <IconCircleCheck className="h-10 w-10 text-green-500" />
+
+                <h3 className="text-xl font-semibold">Message Sent!</h3>
+
+                <p className="text-sm text-gray-400 text-center">
+                  Thank you for reaching out. I'll get back to you soon.
+                </p>
+
+                <button
+                  onClick={() => setOpen(false)}
+                  className="rounded-md bg-green-600 px-4 py-2"
+                >
+                  Close
+                </button>
+              </div>
+            ) : error ? (
+              <div className="flex flex-col items-center gap-4">
+                <IconProgressAlert className="h-10 w-10 text-red-500" />
+
+                <DialogTitle className="text-xl font-semibold text-red-400">
+                  Failed to Send
+                </DialogTitle>
+
+                <p className="text-center text-gray-400">
+                  Something went wrong while sending your message. Please try
+                  again later.
+                </p>
+
+                <button
+                  onClick={() => setOpen(false)}
+                  className="rounded-md bg-red-600 px-4 py-2"
+                >
+                  Close
+                </button>
+              </div>
+            ) : null}
+          </DialogPanel>
+        </div>
+      </Dialog>
     </div>
   );
 }
