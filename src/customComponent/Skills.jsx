@@ -76,8 +76,8 @@ export function InfiniteMovingCardsDemo() {
         Tools and technologies I work with.
       </p>
       <div className="h-80 rounded-md flex flex-col antialiased bg-neutral-200 dark:bg-neutral-900 dark:bg-grid-white/[0.05] items-center justify-center cursor-pointer">
-        <InfiniteMovingCards items={[...Skills1, ...Skills1]} direction="left" speed="normal" />
-        <InfiniteMovingCards items={[...Skills2, ...Skills2]} direction="right" speed="normal" />
+        <InfiniteMovingCards items={[...Skills1, ...Skills1]} direction="left" speed="slow" />
+        <InfiniteMovingCards items={[...Skills2, ...Skills2]} direction="right" speed="slow" />
       </div>
     </>
   );
