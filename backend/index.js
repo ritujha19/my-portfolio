@@ -20,8 +20,7 @@ app.get("/", (req, res) => {
 app.post("/contact", async (req, res) => {
   try {
     const { name, email, subject, message } = req.body;
-    console.log("before sendMail");
-    const result = await resend.emails.send({
+    await resend.emails.send({
       from: "onboarding@resend.dev",
       to: process.env.EMAIL,
       text: `
@@ -35,9 +34,6 @@ app.post("/contact", async (req, res) => {
         ${message}
         `,
     });
-    console.log("After sendMail");
-    console.log(result);
-
     return res.status(200).json({
       success: true,
       message: "Message sent successfully",
