@@ -38,10 +38,14 @@ export const CardContainer = ({
     const { left, top, width, height } =
       containerRef.current.getBoundingClientRect();
 
-    const x = (e.clientX - left - width / 2) / 60;
-    const y = (e.clientY - top - height / 2) / 60;
+    const x = (e.clientX - left - width / 2) / 120;
+const y = (e.clientY - top - height / 2) / 120;
 
-    containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+const rotateY = Math.max(-3, Math.min(3, x));
+const rotateX = Math.max(-3, Math.min(3, -y));
+
+containerRef.current.style.transform =
+  `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
   };
 
   const handleMouseEnter = () => {
@@ -90,7 +94,7 @@ interface CardBodyProps {
 
 export const CardBody = ({ children, className }: CardBodyProps) => {
   return (
-    <div className={cn("h-96 w-96 transform-3d *:transform-3d", className)}>
+    <div className={cn("relative w-full h-auto transform-3d *:transform-3d", className)}>
       {children}
     </div>
   );

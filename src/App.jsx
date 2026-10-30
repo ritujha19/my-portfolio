@@ -28,28 +28,45 @@ function App() {
     document.documentElement.classList.toggle("dark");
   };
 
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+    {email !== "" && password !== "" ? console.log("form submitted") : console.log("Please fill all fields")}
+  };
+
   return (
-    <div
-      className={
-        darkMode
-          ? "bg-dark min-h-screen text-white"
-          : "bg-white min-h-screen text-gray-900"
-      }
-    >
-      <div className="relative z-20 w-full">
-        <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-        <main>
-          <Routes>
-            <Route path="/" element={<Hero />} />
-            <Route path="/About" element={<About />} />
-            <Route path="/Skills" element={<Skills />} />
-            <Route path="/Projects" element={<Projects />} />
-            <Route path="/Contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footor />
+    <>
+      <div
+        className={
+          darkMode
+            ? "bg-dark min-h-screen text-white"
+            : "bg-white min-h-screen text-gray-900"
+        }
+      >
+        <div className="relative z-20 w-full">
+          <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+          <main>
+            <Routes>
+              <Route path="/" element={<Hero />} />
+              <Route path="/About" element={<About />} />
+              <Route path="/Skills" element={<Skills />} />
+              <Route path="/Projects" element={<Projects />} />
+              <Route path="/Contact" element={<Contact />} />
+            </Routes>
+          </main>
+          <Footor />
+        </div>
       </div>
-    </div>
+        <form onSubmit={handleSubmit}>
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
+          {email !== "" && password !== "" ? <p>ready to login</p> : <p>please fill the form</p>}
+          
+          <button type="submit">Submit</button>
+        </form>
+    </>
   );
 }
 

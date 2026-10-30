@@ -36,6 +36,27 @@ const Projects = () => {
 
       <div className="flex flex-col gap-5  justify-center bg-neutral-50 dark:bg-neutral-900 ">
         <ProjectCard
+          title="SAFE-W | Women's Safety App"
+          description={
+            <>
+            <strong className="semi-bold">Your safety shouldn't start with an emergency.</strong> <br /> 
+              SAFE-W is a women's safety mobile application designed to make emergency assistance, trusted-contact communication, and safety information more accessible. 
+            </>
+          }
+          features={[
+            "Quick access to India's emergency helpline (112)",
+            "An AI-powered conversational assistant designed to provide contextual guidance and help users explore appropriate next steps",
+            "Access information about women's rights and relevant safety resources",
+            "Emergency Siren: Activate a siren sound to attract attention when needed",
+            "Explore safety-related educational information and preparedness resources",
+          ]}
+          techStack={["React Native", "Expo SDK 54", "Expo Router", "NativeWind", "Firebase", "Node.js + Express", "Google Gemini API", "Expo Location", "Expo Audio"]}
+          githubLink="https://github.com/ritujha19/SafeW.git"
+          demoVideo="https://vimeo.com/1231766502?fl=ip&fe=ec"
+          demoLink="https://safew.expo.app/download"
+          images={["/Screenshot 5.png", "/Screenshot 6.png"]}
+        />
+        <ProjectCard
           title="StayYatra- Travel Booking Website"
           description={
             <>
@@ -82,28 +103,7 @@ const Projects = () => {
           demoLink="https://ritujha19.github.io/coffee-cafe/"
           images={["/Screenshot 4.png", "/Screenshot 3.png"]}
         />
-        <ProjectCard
-          title="password generator"
-          description={
-            <>
-              A simple and customizable password generator built with React.js.
-              <br /> <strong className="semi-bold">note:</strong> This project
-              was created to practice React.js and JavaScript concepts, and to
-              provide a useful tool for generating strong passwords.
-            </>
-          }
-          features={[
-            "Generate random secure passwords",
-            "Adjustable password length",
-            "Include/exclude: numbers, symbols, uppercase, and lowercase letters",
-            "One-click copy to clipboard functionality",
-            "Responsive and user-friendly UI",
-          ]}
-          techStack={["React.js", "JavaScript (ES6+)", "CSS3", "Clipboard API"]}
-          githubLink="https://github.com/ritujha19/password-generator.git"
-          demoLink="https://ritujha19.github.io/password-generator/"
-          images={["/Screenshot 5.png"]}
-        />
+        
       </div>
       <div className="bg-neutral-50 dark:bg-neutral-900 flex items-center justify-center gap-6 p-4">
         <p> view more of my practice works by checking my github profile</p>

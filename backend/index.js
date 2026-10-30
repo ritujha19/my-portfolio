@@ -20,20 +20,32 @@ app.get("/", (req, res) => {
 app.post("/contact", async (req, res) => {
   try {
     const { name, email, subject, message } = req.body;
-    await resend.emails.send({
+    console.log("Received contact form data:", { name, email, subject, message });
+    const result = await resend.emails.send({
       from: "onboarding@resend.dev",
       to: process.env.EMAIL,
+
+  subject: `Portfolio Contact: ${subject}`,
       text: `
         New Portfolio Contact Form Submission
 
         Name: ${name}
         Email: ${email}
-        Subject: ${subject}
 
         Message:
         ${message}
         `,
     });
+    console.log("RESEND RESULT:", result);
+
+    // ❗ IMPORTANT CHECK
+    if (result.error) {
+      return res.status(400).json({
+        success: false,
+        message: result.error.message,
+      });
+    }
+
     return res.status(200).json({
       success: true,
       message: "Message sent successfully",

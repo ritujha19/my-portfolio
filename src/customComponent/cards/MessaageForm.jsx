@@ -38,7 +38,13 @@ export function MessageForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted", formData);
+    const cleanedData = {
+      name: formData.name.trimStart().toUpperCase(),
+      email: formData.email.trim().toLowerCase(),
+      subject: formData.subject,
+      message: formData.message,
+    };
+    console.log("Form submitted", cleanedData);
     try {
       setOpen(true);
       setLoading(true);
@@ -48,7 +54,7 @@ export function MessageForm() {
       const response = await fetch("http://localhost:5000/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(cleanedData),
       });
       await response.json();
 
