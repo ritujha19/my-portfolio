@@ -3,71 +3,118 @@ import React from "react";
 import { InfiniteMovingCards } from "../components/infinite-moving-cards";
 
 export function InfiniteMovingCardsDemo() {
-  const Skills1 = [
-    {
-      title: "HTML5",
-      iconName: "IconHtml5",
-    },
-    {
-      title: "CSS3",
-      iconName: "IconCss3",
-    },
-    {
-      title: "JavaScript",
-      iconName: "IconJavascript",
-    },
-    {
-      title: "ReactJs",
-      iconName: "IconReact",
-    },
-    {
-      title: "Tailwind CSS",
-      iconName: "IconTailwind",
-    },
-    {
-      title: "Bootstrap",
-      iconName: "IconBootstrap",
-    },
-    {
-      title: "Responsive Design",
-      iconName: "IconDesktop",
-    },
-  ];
+  
+const Skills1 = [
+  {
+    title: "HTML5",
+    iconName: "IconHtml5",
+  },
+  {
+    title: "CSS3",
+    iconName: "IconCss3",
+  },
+  {
+    title: "JavaScript",
+    iconName: "IconJavascript",
+  },
+  {
+    title: "TypeScript",
+    iconName: "IconTypescript"
+  },
+  {
+    title: "React.js",
+    iconName: "IconReact",
+  },
+  {
+    title: "Next.js",
+    iconName: "IconNextjs",
+  },
+  {
+    title: "Tailwind CSS",
+    iconName: "IconTailwind",
+  },
+  {
+    title: "Bootstrap",
+    iconName: "IconBootstrap",
+  },
+  {
+    title: "React Native",
+    iconName: "IconReact",
+  },
+  {
+    title: "Expo",
+    iconName: "IconExpo",
+  },
+  {
+    title: "Responsive Design",
+    iconName: "IconDesktop",
+  },
+  {
+    title: "shadcn/ui",
+    iconName: "IconCode",
+  },
+  {
+    title: "Aceternity UI",
+    iconName: "IconCode",
+  },
+];
 
-  const Skills2 = [
-    {
-      title: "Git",
-      iconName: "IconGit",
-    },
-    {
-      title: "GitHub",
-      iconName: "IconGithub",
-    },
-    {
-      title: "Node.js",
-      iconName: "IconNodejs",
-    },
-    {
-      title: "Express.js",
-      iconName: "IconServer",
-    },
-    {
-      title: "EJS",
-      iconName: "IconCode",
-    },
-    {
-      title: "MongoDB",
-      iconName: "IconMongodb",
-    },
-    {
-      title: "User Authentication",
-      iconName: "IconLock",
-    },
-    {
-      title: "Session Management",
-      iconName: "IconSession",
-    },
-  ];
+  
+const Skills2 = [
+  {
+    title: "Node.js",
+    iconName: "IconNodejs",
+  },
+  {
+    title: "Express.js",
+    iconName: "IconServer",
+  },
+  {
+    title: "EJS",
+    iconName: "IconCode",
+  },
+  {
+    title: "MongoDB",
+    iconName: "IconMongodb",
+  },
+  {
+    title: "REST APIs",
+    iconName: "IconServer",
+  },
+  {
+    title: "Firebase",
+    iconName: "IconFirebase",
+  },
+  {
+    title: "Firestore",
+    iconName: "IconFirebase",
+  },
+  {
+    title: "User Authentication",
+    iconName: "IconLock",
+  },
+  {
+    title: "Session Management",
+    iconName: "IconSession",
+  },
+  {
+    title: "Git",
+    iconName: "IconGit",
+  },
+  {
+    title: "GitHub",
+    iconName: "IconGithub",
+  },
+  {
+    title: "Vercel",
+    iconName: "IconVercel",
+  },
+  {
+    title: "Render",
+    iconName: "IconCloud",
+  },
+];
+
 
   return (
     <>

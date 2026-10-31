@@ -8,23 +8,44 @@ interface CardItem {
   iconName?: string;
 }
 
+
 const iconMap: { [key: string]: React.ComponentType<{ size?: number }> } = {
+  // Frontend
   IconHtml5: Icons.IconBrandHtml5,
   IconCss3: Icons.IconBrandCss3,
   IconJavascript: Icons.IconBrandJavascript,
+  IconTypescript: Icons.IconBrandTypescript,
   IconReact: Icons.IconBrandReact,
+  IconNextjs: Icons.IconBrandNextjs,
   IconTailwind: Icons.IconBrandTailwind,
   IconBootstrap: Icons.IconBrandBootstrap,
   IconDesktop: Icons.IconDeviceDesktop,
-  IconGit: Icons.IconBrandGit,
-  IconGithub: Icons.IconBrandGithub,
+  IconShadcn: Icons.IconComponents,
+  IconCode: Icons.IconCode,
+
+  // Mobile
+  IconExpo: Icons.IconDeviceMobileRotated,
+
+  // Backend
   IconNodejs: Icons.IconBrandNodejs,
   IconServer: Icons.IconServer,
-  IconCode: Icons.IconCode,
   IconMongodb: Icons.IconBrandMongodb,
+  IconPrisma: Icons.IconBrandPrisma,
+
+  // Cloud & Services
+  IconFirebase: Icons.IconBrandFirebase,
+  IconVercel: Icons.IconBrandVercel,
+  IconRender: Icons.IconCloud,
+
+  // Development Tools
+  IconGit: Icons.IconBrandGit,
+  IconGithub: Icons.IconBrandGithub,
+
+  // Concepts
   IconLock: Icons.IconLock,
-  IconSession: Icons.IconSection,
+  IconSession: Icons.IconCookie,
 };
+
 
 interface InfiniteMovingCardsProps {
   items: CardItem[];
